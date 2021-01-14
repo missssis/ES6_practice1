@@ -68,7 +68,7 @@
 
 
 //数组循环
-let arr = ['a','b','c'];
+// let arr = ['a','b','c'];
 // for(let item of arr){
 //     console.log(item);
 // }
@@ -90,5 +90,68 @@ let arr = ['a','b','c'];
 // console.log(list.next().value);
 // console.log(list.next().value);
 // console.log(list.next().value);
+
+
+//传入值，索引，当前数组（传地址）
+// let b = arr.filter((value,index,brr)=>{
+//     brr[index]=0;
+// })
+// console.log(arr.toString())
+// console.log(b)
+
+
+//字符串拼接(注意：后面要用``tab键上面那个点)
+// let str1 = 'hello';
+// let str2 = `<b> ${str1} world!</b>`;
+// console.log(str2.startsWith('<b> hello'))
+// console.log(str2.includes('hello'));
+// document.write(str2)
+
+//复制字符串
+// document.write('$'.repeat(8));
+
+//ES6数字操作
+//ES6数字验证 NAN非数字特殊字符 finite有限的
+// let a = 11/4;
+// console.log(Number.isFinite(a));
+// console.log(Number.isFinite(NaN))
+// console.log(Number.isFinite(undefined));
+
+//ES5数字验证 区别：ES6更加严谨
+// console.log(isNaN(NaN));  //true
+// console.log(isNaN(undefined));  //ture
+// console.log(isNaN('taiji'));  //true
+// console.log(isNaN(123));     //false
+// console.log(isNaN({}));         //true
+// console.log(isNaN(null));       //false
+
+//ES6新增的数组知识
+//find实例方法
+// let arr = [9,2,3,6,5,6,7,8];
+// //箭头函数
+// //find(参数：1.值，2.索引 3.数组)
+// //value表示当前查找的值
+// //index表示当前查找的数组的索引
+// //arr：表示当前数组
+// var v = arr.find((value,index,arr)=> index > 4 );  //首先找到索引比4大的5，返回值6
+// var v2 = arr.findIndex((value,index,arr)=> {return value > 4} );
+// console.log(v);
+// console.log(v2)
+
+//fill() 实例方法
+let arr = ['a','b','c','d'];
+arr.fill('fff',1,3);  //左开右闭 
+console.log(arr)
+//filter() 数组去重 传入的参数value和index一一对应
+var arr2 = ['a','a','d','d','f'];
+console.log(arr2.filter((value,index,arr2)=>arr2.indexOf(value)===index));
+
+
+
+
+
+
+
+
 
 
